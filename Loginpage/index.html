@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - SSD Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</head>
+<body>
+      <div class="Circle circle-student student-show">
+          <h3>Hello</h3>
+      </div>
+      <div class="Circle circle-faculty faculty-hide">
+        <h3>Hello</h3>
+      </div>
+      <div class="Circle circle-hod hod-hide">
+        <h3>Hello</h3>
+      </div>
+      <div class="Circle circle-dpo dpo-hide">
+        <h3>Hello</h3>
+      </div>
+      <div class="Circle circle-admin admin-hide">
+        <h3>Hello</h3>
+      </div>
+      <div class="Circle circle-iqc iqc-hide">
+        <h3>Hello</h3>
+      </div>
+      <div class="Student-Images Images student-show">
+          <img class="Student" src="images/student.svg" alt="">
+      </div>
+      <div class="Faculty-Images Images faculty-hide">
+          <img class="Faculty" src="images/teacher.svg" alt="">
+      </div>
+      <div class="HOD-Images Images hod-hide">
+          <img class="HOD" src="images/HOD.svg" alt="">
+      </div>
+      <div class="DPO-Images Images dpo-hide">
+          <img class="DPO" src="images/DPO.svg" alt="">
+      </div>
+      <div class="Admin-Images Images admin-hide">
+          <img class="Admin" src="images/Admin.svg" alt="">
+      </div>
+      <div class="IQC-Images Images iqc-hide">
+          <img class="IQC" src="images/College.svg" alt="">
+      </div>
+    <div class="CollegeIntro">
+      <img class="Logo" src="images/KSR Logo.svg" alt="" srcset="">
+      <div>
+          <h3>K.S.R. College Of Engineering </h3>
+          <p>Autonomous - Affliated to Anna University ,Chennai & Aproved By AICTE </p>
+          <p>K.S.R Kalvi Nagar,Thiruchengode,Tamilnadu - Pincode </p>
+      </div>
+      <img class="Founder" src="images/founder.jpg" alt="">
+    </div>      
+    <div class="loginsection">
+        <div class="Users">
+            <fieldset id="switch" class="radio">
+                <input checked="" name="switch" id="Student" type="radio">
+                <label for="Student">Student</label>
+                <input name="switch" id="Faculty" type="radio">
+                <label for="Faculty">Faculty</label>
+                <input name="switch" id="HOD" type="radio">
+                <label for="HOD">HOD</label>
+                <input name="switch" id="DPO" type="radio">
+                <label for="DPO">DPO</label>
+                <input name="switch" id="Admin" type="radio">
+                <label for="Admin">Admin</label>
+                <input name="switch" id="IQC" type="radio">
+                <label for="IQC">IQC</label>
+            </fieldset>
+        </div>
+        <div class="Logincard">
+            <div class="Logincard2">
+              <form class="form">
+              <p id="Loginheading">Login</p>
+              <div class="Loginfield">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M13.106 7.222c0-2.967-2.249-5.032-5.482-5.032-3.35 0-5.646 2.318-5.646 5.702 0 3.493 2.235 5.708 5.762 5.708.862 0 1.689-.123 2.304-.335v-.862c-.43.199-1.354.328-2.29.328-2.926 0-4.813-1.88-4.813-4.798 0-2.844 1.921-4.881 4.594-4.881 2.735 0 4.608 1.688 4.608 4.156 0 1.682-.554 2.769-1.416 2.769-.492 0-.772-.28-.772-.76V5.206H8.923v.834h-.11c-.266-.595-.881-.964-1.6-.964-1.4 0-2.378 1.162-2.378 2.823 0 1.737.957 2.906 2.379 2.906.8 0 1.415-.39 1.709-1.087h.11c.081.67.703 1.148 1.503 1.148 1.572 0 2.57-1.415 2.57-3.643zm-7.177.704c0-1.197.54-1.907 1.456-1.907.93 0 1.524.738 1.524 1.907S8.308 9.84 7.371 9.84c-.895 0-1.442-.725-1.442-1.914z"></path>
+              </svg>
+                <input type="text" class="input-field" placeholder="Username" autocomplete="off">
+              </div>
+              <div class="Loginfield">
+              <svg viewBox="0 0 16 16" fill="currentColor" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="input-icon">
+              <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+              </svg>
+                <input type="password" class="input-field" placeholder="Password" id="password-field">
+                <div class="input-icon visibility-icon" onclick="togglePasswordVisibility()" >
+                    <span id="visibility-on-icon" class="material-symbols-outlined">visibility</span>
+                    <span id="visibility-off-icon" class="material-symbols-outlined">visibility_off</span>
+                </div>
+              </div>
+              <div class="btn">
+              <button class="button1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Login&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+              <button class="button2">Sign Up</button>
+              </div>
+              <button class="button3">Forgot Password</button>
+          </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="signup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bg">
+      <div class="bghelper">
+        <div id="form">
+          <div class="modal">
+            <form class="form">
+              <h4>Register</h4>
+              <div class="student-resgistaration-form">
+                <div class="input_container split">
+                  <div>
+                    <label for="Full Name" class="input_label">Full Name</label>
+                    <input class="input_field" type="text" placeholder="Enter your full name">
+                  </div>
+                  <div>
+                    <label for="password_field" class="input_label">Register Number</label>
+                    <input class="input_field" type="text" placeholder="Enter your Register Number">
+                  </div>
+                </div>
+                <div class="input_container">
+                  <label for="Register Number" class="input_label">Mobile Number</label>
+                  <input class="input_field" type="tel" placeholder="Enter your Mobile Number">
+                </div>
+                <div class="input_container">
+                  <label for="Email-ID" class="input_label">Email-ID</label>
+                  <input class="input_field" type="email" title="Inpit title" placeholder="Enter your Email-ID">
+                </div>
+                <div class="input_container">
+                  <label for="Address" class="input_label">Address</label>
+                  <input class="input_field" type="text" title="Inpit title" placeholder="Enter your Address">
+                </div>
+                <div class="input_container">
+                  <label for="password_field" class="input_label">Upload Profile Picture</label>
+                  <div class="actions">
+                    <label for="file" class="button upload-btn">Choose File
+                      <input hidden="" type="file" id="file" onchange="updateFileName()">
+                    </label>
+                  </div>
+                  <div class="result">
+                    <div class="file-uploaded"><p id="file-name">No file selected</p></div>
+                  </div>
+                </div>
+                <div class="input_container split">
+                  <div>
+                    <label for="DOB" class="input_label">Date of Birth</label>
+                    <input class="input_field" type="date" placeholder="DOB">
+                  </div>
+                  <div>
+                    <label for="Gender" class="input_label">Gender</label>
+                    <select class="input_field" name="Gender">
+                      <option value="Gender">Gender</option>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input_container split">
+                  <div>
+                    <label for="graduation" class="input_label">Select Graduation</label>
+                    <select id="graduation" class="input_field" name="graduation">
+                      <option value="None">--Select Graduation--</option>
+                      <option value="UG">UG</option>
+                      <option value="PG">PG</option>
+                    </select>
+                  </div>
+                  <div id="department-container">
+                    <label for="Department" class="input_label">Select Department</label>
+                    <select id="Department" class="input_field" name="Department">
+                      <option value="">--Select Department--</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="input_container split">
+                  <div id="Batch-container">
+                    <label for="Batch" class="input_label">Select Batch</label>
+                    <select id="Batch" class="input_field" name="Batch">
+                      <option value="">--Select Branch--</option>
+                    </select>
+                  </div>
+                  <div id="Section-container">
+                    <label for="Section" class="input_label">Select Section</label>
+                    <select id="Section" class="input_field" name="Batch">
+                      <option value="">--Select Section--</option>
+                    </select>
+                  </div>
+                </div>
+                <button class="purchase--btn">Register</button>
+              </div>
+            </form>
+          </div>
+          </div>
+      </div> 
+      <div class="designandheading">
+        <h2 class="Heading">Student Registration</h2>
+      </div>
+    </div>
+  <script>
+    //Gradaution 
+    const graduationSelect = document.querySelector("#graduation");
+    const departmentSelect = document.querySelector("#Department");
+    const Batchselect = document.querySelector("#Batch")
+    
+    graduationSelect.addEventListener("change", (event) => {
+      const selectedValue = event.target.value;
+      departmentSelect.innerHTML = "";
+      if (selectedValue === "UG") {
+        const options = `
+          <option value="none">--Select Department--</option>
+          <option value="B.E">B.E</option>
+          <option value="B.tech">B.tech</option>
+        `;
+        departmentSelect.insertAdjacentHTML("beforeend", options);
+      } else if (selectedValue === "PG") {
+        const options = `
+          <option value="none">--Select Department--</option>
+          <option value="M.E">M.E</option>
+          <option value="M.tech">M.tech</option>
+        `;
+        departmentSelect.insertAdjacentHTML("beforeend", options);
+      }
+    });
+
+    const departmentContainer = document.querySelector('#department-container');
+
+    graduationSelect.addEventListener('change', () => {
+      if (graduationSelect.value === 'UG' || graduationSelect.value === 'PG') {
+        departmentContainer.style.display = 'flex';
+        departmentContainer.classList.add('animate__animated', 'animate__fadeInDown');
+      } else {
+        departmentContainer.style.display = 'none';
+        departmentContainer.classList.remove('animate__animated', 'animate__fadeInDown');
+      }
+    });
+
+    const BatchContainer = document.querySelector('#Batch-container');
+
+    departmentSelect.addEventListener('change', () => {
+      if (graduationSelect.value !== 'None') {
+        BatchContainer.style.display = 'flex';
+        BatchContainer.classList.add('animate__animated', 'animate__fadeInDown');
+      } else {
+        BatchContainer.style.display = 'none';
+        BatchContainer.classList.remove('animate__animated', 'animate__fadeInDown');
+      }
+    });
+
+    const SectionContainer = document.querySelector('#Section-container');
+
+    departmentSelect.addEventListener('change', () => {
+      if (BatchContainer.value !== 'None') {
+        SectionContainer.style.display = 'flex';
+        SectionContainer.classList.add('animate__animated', 'animate__fadeInDown');
+      } else {
+        SectionContainer.style.display = 'none';
+        SectionContainer.classList.remove('animate__animated', 'animate__fadeInDown');
+      }
+    });
+
+    function updateFileName() {
+      var fileInput = document.getElementById('file');
+      var fileName = fileInput.files[0].name;
+      var fileNameElement = document.getElementById('file-name');
+      fileNameElement.innerText = fileName;
+    }
+  </script>
+</body>
+</html>
